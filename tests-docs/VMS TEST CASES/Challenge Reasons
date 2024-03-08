@@ -1,0 +1,135 @@
+# Positive Test Cases
+# Valid Input - All Fields Provided:
+Description: Verify that a new IdType can be successfully created with all required fields filled correctly.
+Steps:
+Provide valid values for the Name attribute.
+Leave Code, OrderIndex, and Notes fields blank.
+Attempt to create the IdType.
+Expected Outcome:
+IdType is successfully created without errors.
+The new IdType appears in the system with the provided Name.
+# Negative Test Cases
+# Invalid Input - Missing Name:
+
+Description: Verify that creation fails when the Name field is missing.
+Steps:
+Leave the Name field empty.
+Attempt to create the IdType.
+Expected Outcome:
+Creation fails.
+System prompts the user to fill in the Name field as it is required.
+
+# Invalid Input - Duplicate Name:
+
+Description: Verify that creation fails when attempting to create an IdType with a Name that already exists in the system.
+Steps:
+Provide a Name that already exists for another IdType.
+Attempt to create the IdType.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+# Invalid Input - Incorrect Code Format:
+
+Description: Verify that creation fails when the Code field is filled with an incorrect format.
+Steps:
+Provide an invalid format for the Code field.
+Attempt to create the IdType.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided Code has an incorrect format.
+
+# Invalid Input - OrderIndex Out of Range:
+
+Description: Verify that creation fails when the OrderIndex is provided with an out-of-range value.
+Steps:
+Provide an OrderIndex value that exceeds the acceptable range.
+Attempt to create the IdType.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided OrderIndex is out of range.
+ 
+ # Invalid Input - Notes Exceed Maximum Length:
+
+Description: Verify that creation fails when the Notes field contains more characters than the maximum allowed length.
+Steps:
+Provide Notes with characters exceeding the maximum length.
+Attempt to create the IdType.
+Expected Outcome:
+Creation fails.
+System prompts the user that the Notes provided exceed the maximum allowed length and suggests shortening them.
+
+# Invalid Input - Special Characters in Name:
+
+Description: Verify that creation fails when the Name field contains special characters that are not allowed.
+Steps:
+Provide a Name with special characters such as @, #, $, etc.
+Attempt to create the IdType.
+Expected Outcome:
+Creation fails.
+System prompts the user that the Name contains special characters which are not allowed.
+
+# Edit Test Cases:
+# Valid Input - Edit Name:
+Description: Verify that an existing IdType can be successfully edited by changing its Name.
+Steps:
+Select an existing IdType.
+Provide a new valid value for the Name attribute.
+Attempt to edit the IdType.
+Expected Outcome:
+IdType is successfully edited without errors.
+The Name of the IdType is updated to the provided new value.
+
+# Invalid Input - Edit Duplicate Name:
+Description: Verify that editing fails when attempting to change the Name of an IdType to a Name that already exists in the system.
+Steps:
+Select an existing IdType.
+Provide a new Name that already exists for another IdType.
+Attempt to edit the IdType.
+Expected Outcome:
+Editing fails.
+System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+# Delete Test Cases:
+# Valid Input - Delete IdType:
+Description: Verify that an existing IdType can be successfully deleted from the system.
+Steps:
+Select an existing IdType.
+Attempt to delete the IdType.
+Expected Outcome:
+IdType is successfully deleted without errors.
+The IdType is removed from the system.
+
+# Invalid Input - Delete Non-existent IdType:
+Description: Verify that deleting fails when attempting to delete an IdType that does not exist in the system.
+Steps:
+Provide a non-existent IdType.
+Attempt to delete the IdType.
+Expected Outcome:
+Deleting fails.
+System prompts the user that the provided IdType does not exist in the system.
+
+# Search Test Cases:
+
+# Valid Input - Search Existing IdType:
+
+Description: Verify that an existing IdType can be successfully found through the search functionality.
+Steps:
+Provide a valid Name or Code of an existing IdType.
+Attempt to search for the IdType.
+Expected Outcome:
+The IdType is successfully found and displayed in the search results.
+
+# Invalid Input - Search Non-existent IdType:
+
+Description: Verify that searching fails when attempting to search for an IdType that does not exist in the system.
+Steps:
+Provide a non-existent Name or Code.
+Attempt to search for the IdType.
+Expected Outcome:
+Searching fails.
+System prompts the user that the provided IdType does not exist in the system.
+
+
+
+

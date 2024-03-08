@@ -1,0 +1,145 @@
+ModelName = Regions
+
+
+ModelAttributes
+IdCode - Not Nullable, No Duplication
+Name - Not Nullable, No Duplication
+Order Index - Not Nullable, No Duplication
+Notes - Not Nullable, Duplication
+
+ 
+
+# CREATE Test Cases:
+
+# Valid Input:
+
+Description: Provide valid input data for all attributes.
+Steps:
+Provide a unique IdCode.
+Provide a unique Name.
+Provide a unique Order Index.
+Provide a valid Notes.
+Expected Result: The new region should be successfully created in the database.
+
+# Invalid Input (Duplicate IdCode):
+
+Description: Attempt to create a region with an IdCode that already exists in the database.
+Steps:
+Provide an IdCode that already exists.
+Provide valid input for other attributes.
+Expected Result: Creation should fail, showing an error message indicating that the IdCode already exists.
+
+# Invalid Input (Duplicate Name):
+
+Description: Attempt to create a region with a Name that already exists in the database.
+Steps:
+Provide a unique IdCode.
+Provide a Name that already exists.
+Provide valid input for other attributes.
+Expected Result: Creation should fail, showing an error message indicating that the Name already exists.
+
+# Invalid Input (Duplicate Order Index):
+
+Description: Attempt to create a region with an Order Index that already exists in the database.
+Steps:
+Provide a unique IdCode.
+Provide a unique Name.
+Provide an Order Index that already exists.
+Provide valid input for other attributes.
+Expected Result: Creation should fail, showing an error message indicating that the Order Index already exists.
+
+# Invalid Input (Null Values):
+
+Description: Attempt to create a region with null values for required attributes.
+Steps:
+Provide null values for one or more required attributes.
+Expected Result: Creation should fail, showing an error message indicating that the required attributes cannot be null.
+
+# EDIT Test Cases:
+
+# Valid Input:
+
+Description: Edit an existing region with valid input data.
+Steps:
+Choose an existing region.
+Modify one or more attributes.
+Expected Result: The region should be successfully updated with the new values.
+
+# Invalid Input (Duplicate Name during Edit):
+
+Description: Attempt to edit a region to have a Name that already exists in the database.
+Steps:
+Choose an existing region.
+Modify the Name to an existing one.
+Expected Result: Editing should fail, showing an error message indicating that the Name already exists.
+
+# Invalid Input (Duplicate Order Index during Edit):
+
+Description: Attempt to edit a region to have an Order Index that already exists in the database.
+Steps:
+Choose an existing region.
+Modify the Order Index to one that already exists.
+Expected Result: Editing should fail, showing an error message indicating that the Order Index already exists.
+ # Invalid Input (Null Values during Edit):
+
+Description: Attempt to edit a region with null values for required attributes.
+Steps:
+Choose an existing region.
+Set one or more required attributes to null.
+Expected Result: Editing should fail, showing an error message indicating that the required attributes cannot be null.
+
+# DELETE Test Cases:
+
+# Valid Input:
+
+Description: Delete an existing region.
+Steps:
+Choose an existing region.
+Confirm deletion.
+Expected Result: The region should be successfully deleted from the database.
+
+# Invalid Input (Non-existent Region):
+
+Description: Attempt to delete a region that does not exist in the database.
+Steps:
+Choose a non-existent region or provide an invalid ID.
+Expected Result: Deletion should fail, showing an error message indicating that the region does not exist.
+ 
+# SEARCH Test Cases:
+
+# Search by IdCode:
+
+Description: Search for a region using its IdCode.
+Steps:
+Provide an existing IdCode.
+Expected Result: The region corresponding to the provided IdCode should be returned.
+# Search by Name:
+
+Description: Search for a region using its Name.
+Steps:
+Provide an existing Name.
+Expected Result: The region(s) matching the provided Name should be returned.
+
+# Search by Order Index:
+
+Description: Search for a region using its Order Index.
+Steps:
+Provide an existing Order Index.
+Expected Result: The region(s) matching the provided Order Index should be returned.
+# Search by Notes:
+
+Description: Search for a region using its Notes.
+Steps:
+Provide existing Notes.
+Expected Result: The region(s) matching the provided Notes should be returned.
+
+# Invalid Input (Non-existent Attribute):
+
+Description: Search for a region using a non-existent attribute.
+Steps:
+Provide a non-existent attribute name.
+Expected Result: The search should fail, indicating that the attribute is not valid for searching.
+These test cases cover a range of scenarios to ensure that the "Regions" model functions correctly under various conditions.
+
+
+

@@ -1,0 +1,146 @@
+Positive Test Cases
+
+Valid Input - All Fields Provided:
+Description: Verify that a new RegistrationDevice can be successfully created with all required fields filled correctly.
+Steps:
+    Provide valid values for SerialNumber, IdCode, AssignedToRegion, and AssignedToDistrict attributes.
+    Optionally provide a valid value for the Sequence attribute.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    RegistrationDevice is successfully created without errors.
+    The new RegistrationDevice appears in the system with the provided attributes.
+
+
+Negative Test Cases
+
+Invalid Input - Missing Serial Number:
+Description: Verify that creation fails when the SerialNumber field is missing.
+Steps:
+    Leave the SerialNumber field empty.
+    Provide valid values for other required fields.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the SerialNumber field as it is required.
+
+
+Invalid Input - Missing Id Code:
+Description: Verify that creation fails when the IdCode field is missing.
+Steps:
+    Provide a valid SerialNumber.
+    Leave the IdCode field empty.
+    Provide valid values for other required fields.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the IdCode field as it is required.
+
+
+Invalid Input - Duplicate Serial Number:
+Description: Verify that creation fails when attempting to create a RegistrationDevice with a SerialNumber that already exists in the system.
+Steps:
+    Provide a SerialNumber that already exists for another RegistrationDevice.
+    Provide valid values for other required fields.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided SerialNumber already exists and suggests providing a unique SerialNumber.
+
+
+Invalid Input - Duplicate Id Code:
+Description: Verify that creation fails when attempting to create a RegistrationDevice with an IdCode that already exists in the system.
+Steps:
+    Provide a unique SerialNumber.
+    Provide an IdCode that already exists for another RegistrationDevice.
+    Provide valid values for other required fields.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided IdCode already exists and suggests providing a unique IdCode.
+
+
+Invalid Input - Special Characters in Serial Number:
+Description: Verify that creation fails when the SerialNumber field contains special characters that are not allowed.
+Steps:
+    Provide a SerialNumber with special characters such as @, #, $, etc.
+    Provide valid values for other required fields.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the SerialNumber contains special characters which are not allowed.
+
+
+Invalid Input - Special Characters in Id Code:
+Description: Verify that creation fails when the IdCode field contains special characters that are not allowed.
+Steps:
+    Provide a valid SerialNumber.
+    Provide an IdCode with special characters such as @, #, $, etc.
+    Provide valid values for other required fields.
+    Attempt to create the RegistrationDevice.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the IdCode contains special characters which are not allowed.
+
+
+EDIT
+
+Positive Test Cases
+
+
+Valid Input - Edit Serial Number:
+Description: Verify that an existing RegistrationDevice's SerialNumber can be successfully edited.
+Steps:
+    Select an existing RegistrationDevice.
+    Provide a new valid SerialNumber.
+    Save the changes.
+Expected Outcome:
+    alNumber of the RegistrationDevice is successfully updated with the new value.
+
+
+Valid Input - Edit Id Code:
+Description: Verify that an existing RegistrationDevice's IdCode can be successfully edited.
+Steps:
+    Select an existing RegistrationDevice.
+    Provide a new valid IdCode.
+    Save the changes.
+Expected Outcome:
+    IdCode of the RegistrationDevice is successfully updated with the new value.
+
+
+Negative Test Cases
+
+Invalid Input - Edit to Duplicate Serial Number:
+Description: Verify that editing fails when attempting to change the SerialNumber to one that already exists in the system.
+Steps:
+    Select an existing RegistrationDevice.
+    Provide a SerialNumber that already exists for another RegistrationDevice.
+    Save the changes.
+Expected Outcome:
+    Editing fails.
+    System prompts the user that the provided SerialNumber already exists and suggests providing a unique SerialNumber.
+
+
+Invalid Input - Edit to Duplicate Id Code:
+Description: Verify that editing fails when attempting to change the IdCode to one that already exists in the system.
+Steps:
+    Select an existing RegistrationDevice.
+    Provide an IdCode that already exists for another RegistrationDevice.
+    Save the changes.
+Expected Outcome:
+    Editing fails.
+
+
+Description: Verify that an existing RegistrationDevice can be successfully deleted from the system.
+Steps:
+    Provide a valid Code of an existing RegistrationDevice.
+    Attempt to delete the RegistrationDevice.
+Expected Outcome:
+    The selected RegistrationDevice is successfully deleted from the system.
+
+
+Description: Verify that an existing RegistrationDevice can be successfully fetched from the system.
+Steps:
+    Provide a valid Code of an existing RegistrationDevice.
+    Attempt to search for the RegistrationDevice.
+Expected Outcome:
+    The system successfully retrieves the RegistrationDevice based on the provided IdCode.

@@ -1,0 +1,159 @@
+Positive Test Cases
+!Valid Input - All Fields Provided:
+Description: Verify that a new ApplicationSetting can be successfully created with all required fields filled correctly.
+Steps:
+    Provide valid values for both Name and Value attributes.
+    Attempt to create the ApplicationSetting.
+Expected Outcome:
+    ApplicationSetting is successfully created without errors.
+    The new ApplicationSetting appears in the system with the provided Name and Value.
+
+
+Negative Test Cases
+
+!Invalid Input - Missing Name:
+Description: Verify that creation fails when the Name field is missing.
+Steps:
+    1. Leave the Name field empty.
+    2. Provide a valid Value.
+    3. Attempt to create the ApplicationSetting.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the Name field as it is required.
+
+
+!Invalid Input - Missing Value:
+Description: Verify that creation fails when the Value field is missing.
+Steps:
+    Provide a valid Name.
+    Leave the Value field empty.
+    Attempt to create the ApplicationSetting.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the Value field as it is required.
+
+
+!Invalid Input - Duplicate Name:
+Description: Verify that creation fails when attempting to create an ApplicationSetting with a Name that already exists in the system.
+Steps:
+    Provide a Name that already exists for another ApplicationSetting.
+    Provide a unique Value.
+    Attempt to create the ApplicationSetting.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+
+!Invalid Input - Duplicate Value:
+Description: Verify that creation fails when attempting to create an ApplicationSetting with a Value that already exists in the system.
+Steps:
+    Provide a unique Name.
+    Provide a Value that already exists for another ApplicationSetting.
+    Attempt to create the ApplicationSetting.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided Value already exists and suggests providing a unique Value.
+
+
+!Invalid Input - Special Characters in Name:
+Description: Verify that creation fails when the Name field contains special characters that are not allowed.
+Steps:
+    Provide a Name with special characters such as @, #, $, etc.
+    Provide a valid Value.
+    Attempt to create the ApplicationSetting.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the Name contains special characters which are not allowed.
+
+
+!Invalid Input - Special Characters in Value:
+Description: Verify that creation fails when the Value field contains special characters that are not allowed.
+Steps:
+    Provide a valid Name.
+    Provide a Value with special characters such as @, #, $, etc.
+    Attempt to create the ApplicationSetting.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the Value contains special characters which are not allowed.
+
+
+EDIT
+Positive Test Cases
+
+!Valid Input - Edit Name:
+Description: Verify that an existing ApplicationSetting's Name can be successfully edited.
+Steps:
+    Select an existing ApplicationSetting.
+    Provide a new valid Name.
+    Save the changes.
+Expected Outcome:
+    Name of the ApplicationSetting is successfully updated with the new value.
+
+Valid Input - Edit Value:
+Description: Verify that an existing ApplicationSetting's Value can be successfully edited.
+Steps:
+    Select an existing ApplicationSetting.
+    Provide a new valid Value.
+    Save the changes.
+Expected Outcome:
+    Value of the ApplicationSetting is successfully updated with the new value.
+
+
+Negative Test Cases
+
+Invalid Input - Edit to Duplicate Name:
+Description: Verify that editing fails when attempting to change the Name to one that already exists in the system.
+Steps:
+    Select an existing ApplicationSetting.
+    Provide a Name that already exists for another ApplicationSetting.
+    Save the changes.
+Expected Outcome:
+    Editing fails.
+    System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+
+Invalid Input - Edit to Duplicate Value:
+Description: Verify that editing fails when attempting to change the Value to one that already exists in the system.
+Steps:
+    Select an existing ApplicationSetting.
+    Provide a Value that already exists for another ApplicationSetting.
+    Save the changes.
+Expected Outcome:
+    Editing fails.
+    System prompts the user that the provided Value already exists and suggests providing a unique Value.
+
+
+Invalid Input - Special Characters in Name Edit:
+Description: Verify that editing fails when attempting to change the Name to one containing special characters.
+Steps:
+    Select an existing ApplicationSetting.
+    Provide a Name with special characters such as @, #, $, etc.
+    Save the changes.
+Expected Outcome:
+    Editing fails.
+    System prompts the user that the Name contains special characters which are not allowed.
+
+
+Invalid Input - Special Characters in Value Edit:
+Description: Verify that editing fails when attempting to change the Value to one containing special characters.
+Steps:
+    Select an existing ApplicationSetting.
+    Provide a Value with special characters such as @, #,
+Expected Outcome:
+    Editing fails.
+
+
+Description: Verify that an existing Application settings can be successfully deleted from the system.
+Steps:
+    Provide a valid Code of an existing application settings.
+    Attempt to delete the settings.
+Expected Outcome:
+    The selected verification device is successfully deleted from the system.
+
+
+Description: Verify that an existing Application settings can be successfully fetched from the system.
+Steps:
+    Provide a valid Code of an existing application settings.
+    Attempt to search for the settings.
+Expected Outcome:
+    The system successfully retrieves the application settings based on the provided IdCode.

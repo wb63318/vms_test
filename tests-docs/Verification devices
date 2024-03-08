@@ -1,0 +1,128 @@
+Valid Input - All Fields Provided:
+
+Description: Verify that a new verification device can be successfully created with all required fields filled correctly.
+Steps:
+    Provide valid values for the IMEI and IdCode attributes.
+    Attempt to create the verification device.
+Expected Outcome:
+    Verification device is successfully created without errors.
+    The new device appears in the system with the provided IMEI and IdCode.
+
+
+Invalid Input - Missing IMEI:
+Description: Verify that creation fails when the IMEI field is missing.
+Steps:
+    Leave the IMEI field empty.
+    Provide a valid value for the IdCode.
+    Attempt to create the verification device.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the IMEI field as it is required.
+
+
+Invalid Input - Missing IdCode:
+Description: Verify that creation fails when the IdCode field is missing.
+Steps:
+    Provide a valid value for the IMEI.
+    Leave the IdCode field empty.
+    Attempt to create the verification device.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the IdCode field as it is required.
+
+
+Invalid Input - Duplicate IMEI:
+Description: Verify that creation fails when attempting to create a verification device with an IMEI that already exists in the system.
+Steps:
+    Provide an IMEI that already exists for another verification device.
+    Provide a valid value for the IdCode.
+    Attempt to create the verification device.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided IMEI already exists and suggests providing a unique IMEI.
+
+
+Invalid Input - Duplicate IdCode:
+Description: Verify that creation fails when attempting to create a verification device with an IdCode that already exists in the system.
+Steps:
+    Provide a valid value for the IMEI.
+    Provide an IdCode that already exists for another verification device.
+    Attempt to create the verification device.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided IdCode already exists and suggests providing a unique IdCode.
+
+
+Edit Test Cases:
+
+Edit IMEI:
+Description: Verify that the IMEI of an existing verification device can be successfully edited to a unique, valid IMEI.
+Steps:
+    Select an existing verification device.
+    Provide a unique, valid IMEI for editing.
+    Attempt to edit the verification device.
+Expected Outcome:
+    IMEI of the selected verification device is successfully updated to the provided value.
+
+
+Edit IdCode:
+Description: Verify that the IdCode of an existing verification device can be successfully edited to a unique, valid IdCode.
+Steps:
+    Select an existing verification device.
+    Provide a unique, valid IdCode for editing.
+    Attempt to edit the verification device.
+Expected Outcome:
+    IdCode of the selected verification device is successfully updated to the provided value.
+
+
+Edit to Duplicate IMEI:
+Description: Verify that editing fails when attempting to change the IMEI of a verification device to one that already exists in the system.
+Steps:
+    Select an existing verification device.
+    Provide an IMEI that already exists for another verification device.
+    Attempt to edit the verification device.
+Expected Outcome:
+    Editing fails.
+    System prompts the user that the provided IMEI already exists and suggests providing a unique IMEI.
+
+
+Edit to Duplicate IdCode:
+Description: Verify that editing fails when attempting to change the IdCode of a verification device to one that already exists in the system.
+Steps:
+    Select an existing verification device.
+    Provide an IdCode that already exists for another verification device.
+    Attempt to edit the verification device.
+Expected Outcome:
+    Editing fails.
+    System prompts the user that the provided IdCode already exists and suggests providing a unique IdCode.
+
+
+Delete Test Cases:
+
+Delete Existing Device:
+Description: Verify that an existing verification device can be successfully deleted from the system.
+Steps:
+    Select an existing verification device.
+    Attempt to delete the device.
+Expected Outcome:
+    The selected verification device is successfully deleted from the system.
+
+
+Search Test Cases:
+
+Search by Valid IMEI:
+Description: Verify that a verification device can be successfully found by providing a valid IMEI.
+Steps:
+    Provide a valid IMEI of an existing verification device.
+    Attempt to search for the device.
+Expected Outcome:
+    The system successfully retrieves the verification device based on the provided IMEI.
+
+
+Search by Valid IdCode:
+Description: Verify that a verification device can be successfully found by providing a valid IdCode.
+Steps:
+    Provide a valid IdCode of an existing verification device.
+    Attempt to search for the device.
+Expected Outcome:
+    The system successfully retrieves the verification device based on the provided IdCode.

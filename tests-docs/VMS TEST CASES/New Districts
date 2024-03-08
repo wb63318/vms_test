@@ -1,0 +1,193 @@
+ModelAttributes
+IdCode - Not Nullable, No Duplication
+Name - Not Nullable, No Duplication
+Region - Not Nullable, No Duplication
+Order Index - Not Nullable, No Duplication
+Notes - Not Nullable, No Duplication
+
+
+Create
+
+# Positive Test Cases
+# Valid Input - All Fields Provided:
+Description: Verify that a new District can be successfully created with all required fields filled correctly.
+Steps:
+Provide valid values for the Name, IdCode, Region, and OrderIndex attributes.
+Leave Notes field blank.
+Attempt to create the District.
+Expected Outcome:
+District is successfully created without errors.
+The new District appears in the system with the provided Name, IdCode, Region, and OrderIndex.
+
+# Negative Test Cases
+# Invalid Input - Missing Name:
+
+Description: Verify that creation fails when the Name field is missing.
+Steps:
+Leave the Name field empty.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user to fill in the Name field as it is required.
+ 
+ # Invalid Input - Duplicate Name:
+
+Description: Verify that creation fails when attempting to create a District with a Name that already exists in the system.
+Steps:
+Provide a Name that already exists for another District.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided Name already exists and suggests providing a unique Name.
+ 
+ # Invalid Input - Duplicate IdCode:
+
+Description: Verify that creation fails when attempting to create a District with an IdCode that already exists in the system.
+Steps:
+Provide an IdCode that already exists for another District.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided IdCode already exists and suggests providing a unique IdCode.
+
+# Invalid Input - Duplicate Region:
+
+Description: Verify that creation fails when attempting to create a District with a Region that already exists in the system.
+Steps:
+Provide a Region that already exists for another District.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided Region already exists and suggests providing a unique Region.
+
+# Invalid Input - Duplicate OrderIndex:
+
+Description: Verify that creation fails when attempting to create a District with an OrderIndex that already exists in the system.
+Steps:
+Provide an OrderIndex that already exists for another District.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided OrderIndex already exists and suggests providing a unique OrderIndex.
+
+# Invalid Input - Notes Exceed Maximum Length:
+
+Description: Verify that creation fails when the Notes field contains more characters than the maximum allowed length.
+Steps:
+Provide Notes with characters exceeding the maximum length.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user that the Notes provided exceed the maximum allowed length and suggests shortening them.
+
+# Invalid Input - Special Characters in Name:
+
+Description: Verify that creation fails when the Name field contains special characters that are not allowed.
+Steps:
+Provide a Name with special characters such as @, #, $, etc.
+Attempt to create the District.
+Expected Outcome:
+Creation fails.
+System prompts the user that the Name contains special characters which are not allowed.
+
+
+
+# Edit Test Cases:
+# Positive Test Cases
+ 
+ # Valid Edit - Change Name:
+Description: Verify that a District can be successfully edited by changing its Name.
+Steps:
+Select an existing District.
+Provide a new unique Name for the District.
+Attempt to edit the District.
+Expected Outcome:
+Edit is successful.
+The District's Name is updated to the new provided value.
+
+# Valid Edit - Change OrderIndex:
+Description: Verify that a District can be successfully edited by changing its OrderIndex.
+Steps:
+Select an existing District.
+Provide a new unique OrderIndex for the District.
+Attempt to edit the District.
+Expected Outcome:
+Edit is successful.
+The District's OrderIndex is updated to the new provided value.
+
+# Negative Test Cases
+
+# Invalid Edit - Duplicate Name:
+Description: Verify that editing fails when attempting to change the Name to a value that already exists in the system.
+Steps:
+Select an existing District.
+Provide a Name that already exists for another District.
+Attempt to edit the District.
+Expected Outcome:
+Edit fails.
+System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+
+# Delete Test Cases:
+
+# Positive Test Cases
+
+# Valid Delete:
+Description: Verify that a District can be successfully deleted from the system.
+Steps:
+Select an existing District.
+Attempt to delete the District.
+Expected Outcome:
+Delete is successful.
+The District is removed from the system.
+
+# Negative Test Cases
+
+# Invalid Delete - Non-existent District:
+Description: Verify that deletion fails when attempting to delete a District that does not exist in the system.
+Steps:
+Attempt to delete a District that is not present in the system.
+Expected Outcome:
+Delete fails.
+System prompts the user that the District does not exist in the system.
+
+
+# Invalid Delete - District Associated with Data:
+Description: Verify that deletion fails when attempting to delete a District associated with other data (e.g., linked records, dependencies).
+Steps:
+Attempt to delete a District that is associated with other data.
+Expected Outcome:
+Delete fails.
+System prompts the user that the District cannot be deleted due to existing associations.
+
+# Search Test Cases:
+
+# Positive Test Cases
+# Valid Search - Existing District:
+Description: Verify that a District can be successfully searched for and found in the system.
+Steps:
+Search for an existing District by providing its Name, IdCode, Region, or OrderIndex.
+Expected Outcome:
+Search is successful.
+The system displays the details of the searched District.
+
+# Negative Test Cases
+# Invalid Search - Non-existent District:
+Description: Verify that searching for a District that does not exist in the system returns no results.
+Steps:
+Search for a District by providing a Name, IdCode, Region, or OrderIndex that does not exist in the system.
+Expected Outcome:
+Search returns no results.
+System prompts the user that the District does not exist in the system.
+
+# Invalid Search - Special Characters in Search Query:
+Description: Verify that searching fails when the search query contains special characters that are not allowed.
+Steps:
+Search for a District by providing a search query containing special characters such as @, #, $, etc.
+Expected Outcome:
+Search fails.
+System prompts the user that the search query contains special characters which are not allowed.
+
+
+
+

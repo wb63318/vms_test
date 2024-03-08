@@ -1,0 +1,134 @@
+Valid Input - All Fields Provided:
+Description: Verify that a new identification type can be successfully created with all required fields filled correctly.
+Steps:
+    Provide valid values for the Code, Name, and Order Index attributes.
+    Leave the Notes field blank.
+    Attempt to create the identification type.
+Expected Outcome:
+    Identification type is successfully created without errors.
+    The new type appears in the system with the provided Code, Name, and Order Index.
+
+
+Invalid Input - Missing Name:
+Description: Verify that creation fails when the Name field is missing.
+Steps:
+    Provide valid values for the Code and Order Index attributes.
+    Leave the Name field empty.
+    Attempt to create the identification type.
+Expected Outcome:
+    Creation fails.
+    System prompts the user to fill in the Name field as it is required.
+
+
+Invalid Input - Duplicate Name:
+Description: Verify that creation fails when attempting to create an identification type with a Name that already exists in the system.
+Steps:
+    Provide a Name that already exists for another identification type.
+    Provide valid values for the Code and Order Index attributes.
+    Attempt to create the identification type.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+
+Invalid Input - Incorrect Code Format:
+Description: Verify that creation fails when the Code field is filled with an incorrect format.
+Steps:
+    Provide an invalid format for the Code field.
+    Provide valid values for the Name and Order Index attributes.
+    Attempt to create the identification type.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided Code has an incorrect format.
+
+
+Invalid Input - OrderIndex Out of Range:
+Description: Verify that creation fails when the OrderIndex is provided with an out-of-range value.
+Steps:
+    Provide valid values for the Code, Name, and Order Index attributes.
+    Provide an OrderIndex value that exceeds the acceptable range.
+    Attempt to create the identification type.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the provided OrderIndex is out of range.
+
+
+Invalid Input - Notes Exceed Maximum Length:
+Description: Verify that creation fails when the Notes field contains more characters than the maximum allowed length.
+Steps:
+    Provide valid values for the Code, Name, and Order Index attributes.
+    Provide Notes with characters exceeding the maximum length.
+    Attempt to create the identification type.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the Notes provided exceed the maximum allowed length and suggests shortening them.
+
+
+Invalid Input - Special Characters in Name:
+Description: Verify that creation fails when the Name field contains special characters that are not allowed.
+Steps:
+    Provide a Name with special characters such as @, #, $, etc.
+    Provide valid values for the Code and Order Index attributes.
+    Attempt to create the identification type.
+Expected Outcome:
+    Creation fails.
+    System prompts the user that the Name contains special characters which are not allowed.
+
+
+Edit Test Cases:
+Edit Code:
+Description: Verify that the Code of an existing identification type can be successfully edited to a unique, valid Code.
+Steps:
+    Select an existing identification type.
+    Provide a unique, valid Code for editing.
+    Attempt to edit the identification type.
+Expected Outcome:
+Code of the selected identification type is successfully updated to the provided value.
+
+
+Edit Name:
+Description: Verify that the Name of an existing identification type can be successfully edited to a unique, valid Name.
+Steps:
+    Select an existing identification type.
+    Provide a unique, valid Name for editing.
+    Attempt to edit the identification type.
+Expected Outcome:
+    Name of the selected identification type is successfully updated to the provided value.
+
+
+Edit OrderIndex:
+Description: Verify that the OrderIndex of an existing identification type can be successfully edited to a unique, valid OrderIndex.
+Steps:
+    Select an existing identification type.
+    Provide a unique, valid OrderIndex for editing.
+    Attempt to edit the identification type.
+Expected Outcome:
+    OrderIndex of the selected identification type is successfully updated to the provided value.
+
+
+Edit Notes:
+Description: Verify that the Notes of an existing identification type can be successfully edited.
+Steps:
+    Select an existing identification type.
+    Provide new Notes for editing.
+    Attempt to edit the identification type.
+Expected Outcome:
+    Notes of the selected identification type are successfully updated to the provided value.
+
+
+Delete Test Cases:
+Delete Existing Identification Type:
+Description: Verify that an existing identification type can be successfully deleted from the system.
+Steps:
+    Select an existing identification type.
+    Attempt to delete the type.
+Expected Outcome:
+    The selected identification type is successfully deleted from the system.
+
+Search by Code:
+Description: Verify that an identification type can be successfully found by providing a valid Code.
+Steps:
+    Provide a valid Code of an existing identification type.
+    Attempt to search for the type.
+Expected Outcome:
+    The system successfully retrieves the identification type based on the provided Code.

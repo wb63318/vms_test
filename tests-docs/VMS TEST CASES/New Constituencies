@@ -1,0 +1,149 @@
+ModelAttributes
+IdCode - Not Nullable, No Duplication
+Name - Not Nullable, No Duplication
+District - Not Nullable, No Duplication
+Order Index - Not Nullable, No Duplication
+Notes - Not Nullable, No Duplication
+
+
+
+Create
+# Positive Test Cases
+# Valid Input - All Fields Provided:
+
+Description: Verify that a new Constituency can be successfully created with all required fields filled correctly.
+Steps:
+Provide valid values for the Name, IdCode, District, and OrderIndex attributes.
+Leave Notes field blank.
+Attempt to create the Constituency.
+Expected Outcome:
+Constituency is successfully created without errors.
+The new Constituency appears in the system with the provided Name, IdCode, District, and OrderIndex.
+
+# Negative Test Cases
+# Invalid Input - Missing Name:
+
+Description: Verify that creation fails when the Name field is missing.
+Steps:
+Leave the Name field empty.
+Attempt to create the Constituency.
+Expected Outcome:
+Creation fails.
+System prompts the user to fill in the Name field as it is required.
+
+# Invalid Input - Duplicate Name:
+
+Description: Verify that creation fails when attempting to create a Constituency with a Name that already exists in the system.
+Steps:
+Provide a Name that already exists for another Constituency.
+Attempt to create the Constituency.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+# Invalid Input - Duplicate IdCode:
+
+Description: Verify that creation fails when attempting to create a Constituency with an IdCode that already exists in the system.
+Steps:
+Provide an IdCode that already exists for another Constituency.
+Attempt to create the Constituency.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided IdCode already exists and suggests providing a unique IdCode.
+
+# Invalid Input - Duplicate District:
+
+Description: Verify that creation fails when attempting to create a Constituency with a District that already exists in the system.
+Steps:
+Provide a District that already exists for another Constituency.
+Attempt to create the Constituency.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided District already exists and suggests providing a unique District.
+
+# Invalid Input - Duplicate OrderIndex:
+
+Description: Verify that creation fails when attempting to create a Constituency with an OrderIndex that already exists in the system.
+Steps:
+Provide an OrderIndex that already exists for another Constituency.
+Attempt to create the Constituency.
+Expected Outcome:
+Creation fails.
+System prompts the user that the provided OrderIndex already exists and suggests providing a unique OrderIndex.
+
+
+# Edit Test Cases:
+# Positive Test Cases:
+# Valid Edit:
+Description: Verify that a Constituency can be successfully edited with valid changes.
+Steps:
+Select a Constituency to edit.
+Modify one or more attributes with valid values.
+Save the changes.
+Expected Outcome:
+The Constituency is successfully updated without errors.
+The edited attributes reflect the changes made.
+
+# Negative Test Cases:
+# Invalid Edit - Duplicate Name:
+
+Description: Verify that editing fails when attempting to change the Name to one that already exists in the system.
+Steps:
+Select a Constituency to edit.
+Change the Name to that of an existing Constituency.
+Save the changes.
+Expected Outcome:
+Editing fails.
+System prompts the user that the provided Name already exists and suggests providing a unique Name.
+
+# Invalid Edit - SQL Injection Attempt:
+
+Description: Verify that editing fails when attempting SQL injection in any of the input fields.
+Steps:
+Select a Constituency to edit.
+Inject SQL code into any of the input fields.
+Save the changes.
+Expected Outcome:
+Editing fails.
+System detects the SQL injection attempt and prompts the user that the input contains invalid characters.
+
+# Delete Test Cases:
+# Positive Test Cases:
+# Valid Delete:
+Description: Verify that a Constituency can be successfully deleted from the system.
+Steps:
+Select a Constituency to delete.
+Confirm the deletion.
+Expected Outcome:
+The selected Constituency is successfully removed from the system.
+
+# Negative Test Cases:
+# Invalid Delete - Referential Integrity:
+Description: Verify that deletion fails when attempting to delete a Constituency associated with other entities.
+Steps:
+Select a Constituency that is associated with other records.
+Attempt to delete it.
+Expected Outcome:
+Deletion fails.
+System prompts the user that the Constituency is associated with other entities and cannot be deleted directly.
+
+# Search Test Cases:
+
+# Positive Test Cases:
+# Valid Search:
+Description: Verify that Constituencies can be successfully searched based on various criteria.
+Steps:
+Provide search criteria (e.g., Name, IdCode, District, etc.).
+Initiate the search.
+Expected Outcome:
+The system returns Constituencies matching the provided search criteria.
+
+# Negative Test Cases:
+# Invalid Search - Non-existent Criteria:
+Description: Verify that searching with non-existent criteria returns no results.
+Steps:
+Provide non-existent search criteria.
+Initiate the search.
+Expected Outcome:
+The system returns no results, indicating that the search criteria are invalid.
+These test cases should help ensure the robustness and reliability of the edit, delete, and search functionalities of the system.

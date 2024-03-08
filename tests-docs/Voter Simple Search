@@ -1,0 +1,15 @@
+Search by Valid Voter ID:
+
+Description: Verify that a voter can be successfully found by providing a valid Voter ID.
+Input: 
+    Valid Voter ID of an existing voter.
+Expected Outcome: 
+    The system successfully retrieves the voter based on the provided Voter ID.
+
+
+Invalid Input - Non-existent Voter ID:
+Description: Verify that searching fails when providing a non-existent Voter ID.
+Input: 
+    Provide a Voter ID that does not exist in the system.
+Expected Outcome: 
+    Searching fails, and the system prompts the user that no voter exists with the provided Voter ID.
