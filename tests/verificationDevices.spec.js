@@ -22,7 +22,7 @@ test.describe('Verification Devices ', ()=>
         });
         //!
         test('Invalid Input -Missing IMEI', async({page})=>{
-            await page.goto(baseURL);
+           await page.goto(baseURL);
             // login
            await page.getByPlaceholder('Username').fill(userName);
            await page.getByPlaceholder('Password').fill(pass);
